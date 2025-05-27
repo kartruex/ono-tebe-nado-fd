@@ -16,8 +16,8 @@
 }
 
 .header__menu-item {
-  padding-right: 1px;
-  padding-bottom: 2px;
+  padding-right: 1.6px;
+  padding-bottom: 4px;
 }
 
 .header_image {
@@ -31,8 +31,12 @@ address {
   line-height: 24px;
   font-weight: 400;
   width: 240px;
-  height: 98px;
   justify-self: end;
+}
+
+address:first-of-type {
+  padding-right: 1px;
+  padding-bottom: 3px;
 }
 
 .list-item_no-bullit {
@@ -54,7 +58,7 @@ address {
 .overlay {
   position: absolute;
   inset: 0;
-  background: rgba(0, 0, 0, 0.4);
+  background: rgb(0 0 0/0.6);
   z-index: -1;
 }
 
@@ -116,9 +120,9 @@ address {
 
 .lots {
   position: relative;
-  width: 1052px;
+  width: 100%;
+  max-width: 1100px;
   height: auto;
-  padding: 180px 0 120px 0;
   z-index: 1;
 }
 
@@ -126,23 +130,33 @@ address {
   font: 700 40px/47px Raleway, sans-serif;
   text-transform: uppercase;
   padding-left: 64px;
+  padding-top: 180px;
 }
 
 .lots__card-list {
   display: flex;
   gap: 25px;
-  overflow: visible;
+  flex-wrap: wrap;
   padding: 27px 0 0 24px;
 }
 
 .lots__card-list-item {
   display: flex;
+  flex: 0 0 334px;
   flex-direction: column;
+  max-width: 334px;
+  min-height: 596px;
   justify-content: space-between;
-  min-width: 334px;
   min-height: 596px;
   padding: 48px 40px;
   list-style: none;
+}
+
+.lots__card-list-item a {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%; /* важно! чтобы распределение работало */
 }
 
 .lots__card-list-item article {
@@ -150,36 +164,27 @@ address {
   flex-direction: column;
   justify-content: space-between;
   height: 100%;
+  gap: 10px;
+}
+
+.card {
+  position: relative;
+  z-index: 2;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
 .card_type_film {
-  position: relative;
-  z-index: 2;
   background-image: url(../images/card-lot-01.jpg);
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  width: 100%;
-  height: auto;
-  aspect-ratio: 334 / 596;
 }
 
 .card_type_book {
-  position: relative;
-  z-index: 2;
   background-image: url(../images/card-lot-02.jpg);
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
 }
 
 .card_type_picture {
-  position: relative;
-  z-index: 2;
   background-image: url(../images/card-lot-03.jpg);
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
 }
 
 .card__title {
@@ -206,13 +211,13 @@ address {
   padding-left: 24px;
   padding-right: 24px;
   gap: 25px;
-  padding-top: 35px;
+  padding-top: 155px;
 }
 
 .about__logo {
   display: flex;
-  align-items: start; /* по вертикали */
-  justify-content: center; /* по горизонтали */
+  align-items: start;
+  justify-content: center;
 }
 
 .about__logo-image {
@@ -237,24 +242,24 @@ address {
 }
 
 .about__text {
-  display: inline-block;
+  display: block;
   font: 400 20px/24px Raleway, sans-serif;
   word-break: keep-all;
-  padding-right: 16px;
+  padding-top: 1px;
+  padding-bottom: 23px;
   letter-spacing: 0;
   max-width: 693px;
 }
 
-.about__text:first-child {
-  padding-bottom: 25px;
+.about__text:first-of-type {
+  padding-right: 24px;
 }
 
 .footer {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   width: 1100px;
-  height: 180px;
-  padding: 182px 50px 82px 50px;
+  padding: 158px 50px 82px 50px;
 }
 
 .address:last-of-type {
@@ -281,4 +286,3 @@ address {
   height: 48px;
   gap: 48px;
 }
-
