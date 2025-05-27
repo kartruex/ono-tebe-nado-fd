@@ -147,7 +147,6 @@ address:first-of-type {
   max-width: 334px;
   min-height: 596px;
   justify-content: space-between;
-  min-height: 596px;
   padding: 48px 40px;
   list-style: none;
 }
@@ -156,7 +155,7 @@ address:first-of-type {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  height: 100%; /* важно! чтобы распределение работало */
+  height: 100%;
 }
 
 .lots__card-list-item article {
@@ -244,7 +243,7 @@ address:first-of-type {
 .about__text {
   display: block;
   font: 400 20px/24px Raleway, sans-serif;
-  word-break: keep-all;
+  word-break: normal;
   padding-top: 1px;
   padding-bottom: 23px;
   letter-spacing: 0;
@@ -283,6 +282,5 @@ address:first-of-type {
 
 .footer__links-favicon-menu-item {
   width: 48px;
-  height: 48px;
   gap: 48px;
 }
